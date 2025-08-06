@@ -1,0 +1,22 @@
+<!-- chat.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Web Chat Client</title>
+  <link rel="stylesheet" href="design.css">
+</head>
+<body>
+  <div class="div1">
+    <h2 class="t1">WebSocket Chat</h2>
+    <input id="username" placeholder="Enter Name" />
+    <button onclick="joinRoom()" class="e1">Connect </button>
+    <br><br>
+    <textarea id="chat" rows="10" cols="50" readonly></textarea><br>
+    <input id="msg" placeholder="Type message..." />
+    <button onclick="sendMessage()" class="b1">Send</button>
+  </div>
+
+  <script src="messages.js">
+  </script>
+</body>
+</html>

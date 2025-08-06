@@ -1,0 +1,28 @@
+body{
+    display: flex;
+    background-image: url('images/webbck2.jpg');
+    background-repeat: no-repeat;
+    justify-content: center;
+    
+    min-height: 100vh;
+}
+
+
+
+.connected{
+    color: greenyellow;
+}
+
+.div1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;   
+    .b1{
+        width: 180px;
+    }
+    .e1{
+        width: 200px;
+    }
+}

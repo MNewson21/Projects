@@ -6,6 +6,8 @@ import org.java_websocket.handshake.ServerHandshake;
 import javax.swing.*;
 import java.awt.*;
 import java.net.URI;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 public class ChatClient {
 
@@ -37,6 +39,7 @@ public class ChatClient {
         frame.setSize(300, 100);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
+        frame.setResizable(false);
     }
 
     private void createUI() {
@@ -45,10 +48,14 @@ public class ChatClient {
         chatArea.setEditable(false);
 
         inputField = new JTextField();
+        inputField.setBounds(0, 400, 400, 200);
         inputField.addActionListener(e -> {
             String message = inputField.getText().trim();
             if (!message.isEmpty()) {
+
                 client.send(username + ": " + message);  // Prefix message with name
+                
+                
                 chatArea.append("Me: " + message + "\n");
                 inputField.setText("");
             }
@@ -74,6 +81,7 @@ public class ChatClient {
 
                 @Override
                 public void onMessage(String message) {
+
                     chatArea.append(message + "\n");
                 }
 
