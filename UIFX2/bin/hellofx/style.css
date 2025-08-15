@@ -1,0 +1,61 @@
+.right_side_pane{
+	-fx-background-color: #A4C4B5;
+
+	
+	
+}
+
+.left_side_pane{
+	-fx-background-image: url("forest.jpg");
+	-fx-background-size: cover; /* scale to fill the pane */
+	-fx-background-position: center center;
+	-fx-background-repeat: no-repeat;
+	
+	
+	
+	
+}
+.titletext{
+	color: rgb(255, 128, 192);
+
+}
+
+.formtext{
+	color: rgb(128, 255, 128);
+	font-size: 300px;
+	align-self: center;
+}
+.btn1{
+
+	align-self: center;
+	-fx-background-color: #A4C4B5;
+
+}
+
+.root_pane{
+	-fx-background-image: url("forest.jpg");
+	-fx-background-size: cover; /* scale to fill the pane */
+	-fx-background-position: center center;
+	-fx-background-repeat: no-repeat;
+}
+
+.btn2{
+	align-self: center;
+	-fx-background-color: rgb(135, 224, 214);
+}
+
+.backnotes{
+	-fx-background-image: url("forest.jpg");
+	-fx-background-size: cover; /* scale to fill the pane */
+	-fx-background-position: center center;
+	-fx-background-repeat: no-repeat;
+}
+.notesbtn1{
+	align-self: center;
+	-fx-background-color: rgb(135, 224, 214);
+}
+
+.notesbtn2{
+	align-self: center;
+	-fx-background-color: rgb(135, 224, 214);
+}
