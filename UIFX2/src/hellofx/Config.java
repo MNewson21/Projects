@@ -4,6 +4,8 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
+
+//This is no longer used for my files since I added policies to the db
 public class Config {
     private static Properties props = new Properties();
 

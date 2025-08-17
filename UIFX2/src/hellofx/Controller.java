@@ -25,8 +25,9 @@ public class Controller {
     @FXML
     private TextField passinput;
 
-    private static final String SUPABASE_URL = Config.get("SUPABASE_URL");
-    private static final String SUPABASE_ANON_KEY = Config.get("SUPABASE_ANON_KEY");
+    private static final String SUPABASE_URL = "https://tpzmmjktbrvwncuahjka.supabase.co";
+    private static final String SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwem1tamt0YnJ2d25jdWFoamthIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTUxMDc3OTgsImV4cCI6MjA3MDY4Mzc5OH0.XWvc1XfKseFHBJMXUQBpx-KfKmZJvI5ztuefFcIlcM8";
+    
     
     private HttpClient httpClient = HttpClient.newHttpClient();
 
@@ -83,7 +84,6 @@ public class Controller {
                         .append("\n");
             }
 
-            //showAlert("Data Fetched", result.toString());
             
 
             String userId = loginJson.getJSONObject("user").getString("id"); // unique user id
