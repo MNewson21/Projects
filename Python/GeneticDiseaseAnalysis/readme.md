@@ -1,6 +1,6 @@
 ## Dataset Attribution
 
-This project uses the "Gene Expression Analysis and Disease Relationship" dataset, downloaded from [Kaggle](https://www.kaggle.com/dataset-link).  
+This project uses the "Gene Expression Analysis and Disease Relationship" dataset, downloaded from [Kaggle](https://www.kaggle.com/dataset-link](https://www.kaggle.com/datasets/ylmzasel/gene-expression-analysis-and-disease-relationship).  
 
 - **Creator:** [Asel YILMAZ]  
 - **License:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)  
