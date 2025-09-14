@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  font-family: 'Arial', sans-serif;
+  color: white;
+  font-size: 3rem;
+}
+input{
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  border: none;
+}
+
+#countdown {
+    opacity: 50%;
+  text-align: center;
+  font-size: 200px;
+  text-decoration-style: double;
+
+  text-decoration-thickness: 10px;
+  text-rendering: auto;
+
+}
+
+.box{
+    align-self: center;
+    align-content: center;
+
+}
+header{
+    align-content: center;
+}
+
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
