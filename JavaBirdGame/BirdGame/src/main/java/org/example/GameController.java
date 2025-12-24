@@ -1,31 +1,44 @@
 package org.example;
 
-import javafx.event.ActionEvent;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
-
-import java.io.IOException;
+import javafx.scene.canvas.Canvas;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.text.Text;
 
 public class GameController {
-    private Stage stage;
+    private Game game;
 
-    public GameController() {
+    @FXML
+    Text TimerText;
 
-    }
+    @FXML
+    AnchorPane globalpane;
 
-    public void init(Stage stage) {
-        this.stage = stage;
+    @FXML
+    Canvas globalcanvas;
+
+    public GameController(){
     }
 
     @FXML
-    public void OnStartButtonClicked(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/birdgame.fxml"));
-        Parent root = loader.load();
-        stage.setScene(new Scene(root));
+    public void initialize(){
+        this.game = new Game(globalcanvas);
+        BirdLoop temploop = new BirdLoop(this);
+        globalpane.setFocusTraversable(true);
+        globalpane.addEventFilter(KeyEvent.KEY_PRESSED, e->game.onKeyPressed(e));
+        globalpane.addEventFilter(KeyEvent.KEY_RELEASED, e->game.onKeyReleased(e));
+
+        Platform.runLater(() -> globalpane.requestFocus());
+        temploop.start();
+
     }
+
+    public void render(){
+        game.update();
+    }
+
 
 
 }

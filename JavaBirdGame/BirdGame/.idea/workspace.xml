@@ -4,12 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="75f42ad4-d367-488c-8794-f02a9cfbdcdc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/BirdLoop.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/GameController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/birdgame.fxml" afterDir="false" />
+    <list default="true" id="75f42ad4-d367-488c-8794-f02a9cfbdcdc" name="Changes" comment="Added ui scene, changed startup and controller">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Game.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/GameCanvas.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ImageHolder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/StartContoller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/TurtleEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/TurtleMovement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Sprites/Turtle/sprite-1-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Sprites/Turtle/sprite-1-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Sprites/Turtle/sprite-1-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Sprites/Turtle/sprite-1-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Sprites/Turtle/sprite-1-5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Sprites/Turtle/sprite-1-6.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/BirdLoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/BirdLoop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/birdgame.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/birdgame.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/birdmain.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/birdmain.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,6 +39,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;MNewson21&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/MNewson21/Projects.git&quot;,
+    &quot;accountId&quot;: &quot;2f5c8b2d-5818-4dc6-bea3-76b4e6013b67&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -49,10 +73,15 @@
     "git-widget-placeholder": "birdDev",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Lenovo/Desktop/Projects/Projects/JavaBirdGame/BirdGame",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "last_opened_file_path": "C:/Users/Lenovo/Desktop/Projects/Projects/JavaBirdGame/BirdGame/src/main/resources/Sprites/Turtle",
+    "settings.editor.selected.configurable": "configurable.group.editor"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Lenovo\Desktop\Projects\Projects\JavaBirdGame\BirdGame\src\main\resources\Sprites\Turtle" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="BirdGame [clean,javafx:run]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
       <MavenSettings>
@@ -101,6 +130,19 @@
       <option name="presentableId" value="Default" />
       <updated>1766099703957</updated>
     </task>
+    <task id="LOCAL-00001" summary="Added ui scene, changed startup and controller">
+      <option name="closed" value="true" />
+      <created>1766530455722</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1766530455722</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added ui scene, changed startup and controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added ui scene, changed startup and controller" />
   </component>
 </project>
