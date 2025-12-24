@@ -1,0 +1,11 @@
+#APANE{
+    -fx-border-color: BLACK;
+    -fx-border-width: 10;
+    -fx-background-color: rgb(207, 114, 255)
+}
+
+#StartButton{
+    -fx-border-color: BLACK;
+    -fx-border-width: 1;
+    -fx-background-color: rgb(207, 114, 255)
+}
