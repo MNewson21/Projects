@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="75f42ad4-d367-488c-8794-f02a9cfbdcdc" name="Changes" comment="Added Movable Turtle using keyboard inputs">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/EntityController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/BirdLoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/BirdLoop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GameCanvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GameCanvas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ImageHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ImageHolder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/TurtleEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/TurtleEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/TurtleMovement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/TurtleMovement.java" afterDir="false" />
-    </list>
+    <list default="true" id="75f42ad4-d367-488c-8794-f02a9cfbdcdc" name="Changes" comment="Added Turtle Animations and Refactored Structure" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -143,7 +133,15 @@
       <option name="project" value="LOCAL" />
       <updated>1766603920992</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added Turtle Animations and Refactored Structure">
+      <option name="closed" value="true" />
+      <created>1766696584774</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1766696584774</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -160,6 +158,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added ui scene, changed startup and controller" />
     <MESSAGE value="Added Movable Turtle using keyboard inputs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Movable Turtle using keyboard inputs" />
+    <MESSAGE value="Added Turtle Animations and Refactored Structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Turtle Animations and Refactored Structure" />
   </component>
 </project>
