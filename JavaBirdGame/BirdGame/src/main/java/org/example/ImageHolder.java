@@ -5,20 +5,25 @@ import javafx.scene.image.Image;
 import java.util.Objects;
 
 public class ImageHolder {
+    public int turtleidleframe = 0;
 
+    public Image ImageGenerator(String filepath){
+        return new Image(
+                Objects.requireNonNull(
 
-    public Image ImageGenerator(String path){
-        Image image = new Image(getClass().getClassLoader().getResourceAsStream(path));
-        return image;
+                        getClass().getResourceAsStream(filepath),
+                        "Cannot find the file: " + filepath
+                )
+        );
     }
 
     public Image[] TurtleIdle = new Image[] {
-        ImageGenerator("/Sprites/Turtle/Sprite-1-1.png"),
-        ImageGenerator("/Sprites/Turtle/Sprite-1-2.png"),
-        ImageGenerator("/Sprites/Turtle/Sprite-1-3.png"),
-        ImageGenerator("/Sprites/Turtle/Sprite-1-4.png"),
-        ImageGenerator("/Sprites/Turtle/Sprite-1-5.png"),
-        ImageGenerator("/Sprites/Turtle/Sprite-1-6.png")
+        ImageGenerator("/Sprites/Turtle/sprite-1-1.png"),
+        ImageGenerator("/Sprites/Turtle/sprite-1-2.png"),
+        ImageGenerator("/Sprites/Turtle/sprite-1-3.png"),
+        ImageGenerator("/Sprites/Turtle/sprite-1-4.png"),
+        ImageGenerator("/Sprites/Turtle/sprite-1-5.png"),
+        ImageGenerator("/Sprites/Turtle/sprite-1-6.png")
 
     };
 

@@ -8,16 +8,12 @@ import java.util.Objects;
 
 public class TurtleEntity {
     private TurtleMovement turtleMovement;
-    private long lastRequest = System.nanoTime();
 
-    Image idleimage  = new Image(Objects.requireNonNull(
-    getClass().getResource("/Sprites/Turtle/sprite-1-1.png"),
-            "Missing resource: /Sprites/Turtle/sprite-1-1.png"
-                    ).toExternalForm()
-    );
+
     double x = 900;
     double vx = 0;
 
+    double animdt = 0;
 
     double y = 450;
     double vy = 0;
@@ -25,13 +21,15 @@ public class TurtleEntity {
     double height;
     double width;
 
+    public Image currentimg;
+    private EntityController entityController;
 
-    public TurtleEntity() {
-        //this.idleimage = new Image(this.getClass().getClassLoader().getResourceAsStream("/Sprites/Turtle/sprite-1-1.png"));
-        this.width = idleimage.getWidth();
-        this.height = idleimage.getHeight();
+    public TurtleEntity(double width, double height, EntityController entityController) {
+        this.width = width;
+        this.height = height;
         this.turtleMovement = new TurtleMovement(this);
-
+        this.entityController = entityController;
+        currentimg = entityController.getGame().getImageholder().TurtleIdle[0];
     }
 
 
@@ -40,18 +38,21 @@ public class TurtleEntity {
         this.vy = vy;
     }
 
-    public void update() {
-        turtleMovement.update();
-        x += vx;
-        y += vy;
+    public void update(double dt) {
+        animdt += dt;
+        x += vx * dt;
+        y += vy * dt;
+        System.out.println("Before redraw x y vx vy dt " + x + " : " + y  + " : "+ vx + " : " + vy + ":" + dt);
         setPosition(x, y);
-        if (System.currentTimeMillis() - lastRequest > 500) {
-            lastRequest = System.currentTimeMillis();
+        if (animdt > 0.050){
+            animdt = 0;
+            currentimg = nextAnimFrame();
         }
     }
 
     public void draw(GraphicsContext gc) {
-        gc.drawImage(idleimage, x, y, width*2, height*2);
+        System.out.println("draw att : " + " x: " + x + " y: " + y + " width: " + width + " height: " + height);
+        gc.drawImage(currentimg, x, y, width*2, height*2);
     }
 
     public void setPosition(double x, double y) {
@@ -66,5 +67,20 @@ public class TurtleEntity {
     public void onKeyReleased(KeyEvent e){
         System.out.println("Key Released");
         turtleMovement.onKeyReleased(e);
+    }
+
+    public void updateMovement(double dt){
+        turtleMovement.update(dt);
+    }
+
+    public Image nextAnimFrame(){
+        if (entityController.getGame().getImageholder().turtleidleframe == 5){
+            entityController.getGame().getImageholder().turtleidleframe = 0;
+        }
+        else{
+            entityController.getGame().getImageholder().turtleidleframe++;
+        }
+
+        return entityController.getGame().getImageholder().TurtleIdle[entityController.getGame().getImageholder().turtleidleframe];
     }
 }

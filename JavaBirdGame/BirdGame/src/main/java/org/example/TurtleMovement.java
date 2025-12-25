@@ -8,6 +8,9 @@ public class TurtleMovement {
     private final double speed = 25; // pixels per second
 
     private boolean up, down, left, right;
+    private double maxSpeed = 600;
+    private double acceleration = 1000;
+    private double friction = 300;
 
     public TurtleMovement(TurtleEntity turtle) {
         this.turtle = turtle;
@@ -29,15 +32,50 @@ public class TurtleMovement {
         if (k == KeyCode.D || k == KeyCode.RIGHT) right = false;
     }
 
-    public void update() {
-        double vx = 0, vy = 0;
+    public void update(double dt) {
+        double ax = 0;
+        double ay = 0;
 
-        if (left)  vx -= speed;
-        if (right) vx += speed;
-        if (up)    vy -= speed;
-        if (down)  vy += speed;
+        if (left)  ax -= acceleration;
+        if (right) ax += acceleration;
+        if (up)    ay -= acceleration;
+        if (down)  ay += acceleration;
 
-        turtle.setVelocity(vx, vy);
+        turtle.vx += ax * dt;
+        turtle.vy += ay * dt;
+
+        System.out.println("After initial turtle.vx turtle.vy" + turtle.vx + turtle.vy);
+        if (!left && !right){
+            turtle.vx = applyFriction(turtle.vx, dt);
+        }
+
+        if (!up && !down){
+            turtle.vy = applyFriction(turtle.vy,dt);
+        }
+
+
+        turtle.vx = clamp(turtle.vx, -maxSpeed, maxSpeed);
+        turtle.vy = clamp(turtle.vy, -maxSpeed, maxSpeed);
+
+        System.out.println("Final turtle.vx, turtle.vy = " + turtle.vx + turtle.vy);
+        turtle.setVelocity(turtle.vx, turtle.vy);
+
+
+    }
+
+    private double applyFriction(double v, double dt) {
+        if (v > 0) {
+            v -= friction * dt;
+            if (v < 0) v = 0;
+        } else if (v < 0) {
+            v += friction * dt;
+            if (v > 0) v = 0;
+        }
+        return v;
+    }
+
+    private double clamp(double value, double min, double max) {
+        return Math.max(min, Math.min(max, value));
     }
 
 

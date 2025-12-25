@@ -39,6 +39,8 @@ public class GameController {
         game.update();
     }
 
-
+    public void updateMovement(double dt){
+        game.updateMovement(dt);
+    }
 
 }
