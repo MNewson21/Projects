@@ -1,6 +1,6 @@
 Hello I am Miles Newson <br> <br>
 This is my personal git for projects that I make alongside studying Computer Science <br> 
-- I am currently in the second of ymy degree as of this readme update <br>
+- I am currently in the second year of my degree as of this readme update <br>
 - This is also used to improve my proficiency in languages that I know <br> 
 - I also do leetcode in my spare time ~ https://leetcode.com/u/milesn/ <br> <br>
 
