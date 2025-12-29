@@ -52,8 +52,7 @@ public class TurtleEntity {
     }
 
     public void draw(GraphicsContext gc) {
-        System.out.println("draw att : " + " x: " + x + " y: " + y + " width: " + width + " height: " + height);
-        gc.drawImage(currentimg, x, y, width*2, height*2);
+        turtleGraphics.draw(gc);
     }
 
     public void setPosition(double x, double y) {
