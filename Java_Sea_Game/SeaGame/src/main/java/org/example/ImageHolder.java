@@ -27,7 +27,7 @@ public class ImageHolder {
 
     };
 
-
+    public Image background = ImageGenerator("/Sprites/sea1.png");
 
 
 
@@ -36,4 +36,6 @@ public class ImageHolder {
 //            "Missing resource: /Sprites/Turtle/sprite-1-1.png"
 //                    ).toExternalForm()
 //    )
+
+
 }

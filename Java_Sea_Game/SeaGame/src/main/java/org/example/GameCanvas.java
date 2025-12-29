@@ -19,7 +19,9 @@ public class GameCanvas {
 
     public void render() {
         gc.clearRect(0, 0, javafxcanvas.getWidth(), javafxcanvas.getHeight());
+        game.getBackground().draw(gc);
         game.getEntityController().getTurtle().draw(gc);
+
     }
 
 

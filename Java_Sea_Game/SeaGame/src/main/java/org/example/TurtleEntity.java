@@ -8,7 +8,7 @@ import java.util.Objects;
 
 public class TurtleEntity {
     private TurtleMovement turtleMovement;
-
+    private TurtleGraphics turtleGraphics;
 
     double x = 900;
     double vx = 0;
@@ -30,6 +30,7 @@ public class TurtleEntity {
         this.turtleMovement = new TurtleMovement(this);
         this.entityController = entityController;
         currentimg = entityController.getGame().getImageholder().TurtleIdle[0];
+        this.turtleGraphics = new TurtleGraphics(this);
     }
 
 

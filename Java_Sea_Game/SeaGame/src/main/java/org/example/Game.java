@@ -10,6 +10,7 @@ public class Game {
     private GameCanvas canvas;
     private ImageHolder imageholder;
     private EntityController entityController;
+    private Background background;
 
     public Game(Canvas globalcanvas){
         this.globalcanvas = globalcanvas;
@@ -17,6 +18,7 @@ public class Game {
         imageholder = new ImageHolder();
         entityController = new EntityController(this);
         entityController.spawnTurtle();
+        background = new Background(imageholder.background);
     }
 
     public void update(){
@@ -47,5 +49,9 @@ public class Game {
 
     public EntityController getEntityController() {
         return entityController;
+    }
+
+    public Background getBackground() {
+        return background;
     }
 }

@@ -33,6 +33,7 @@ public class GameController {
         Platform.runLater(() -> globalpane.requestFocus());
         temploop.start();
 
+
     }
 
     public void render(){
