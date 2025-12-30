@@ -6,8 +6,10 @@ This game is created using JavaFX combined with FXML using a simple Maven Archet
 
 The aim of this game is to keep the Turtle alive and gain as many points as possible
 
-This game is still in development and I am trying to consistently work on it
+This game is still in development, and I am trying to consistently work on it
 
 Since it is not finished, you can find my [Changelog](Docs/changelog.md)
 
-This is what the current game looks like : ![Current Image of the Sea Game](MarkdownImages/currentturtlegamestatus.PNG)
+This is what the current game looks like : 
+<br>
+![Current Image of the Sea Game](MarkdownImages/currentturtlegamestatus.PNG)
