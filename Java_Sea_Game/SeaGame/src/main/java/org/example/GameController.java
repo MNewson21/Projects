@@ -9,6 +9,7 @@ import javafx.scene.text.Text;
 
 public class GameController {
     private Game game;
+    private double ElapsedTime;
 
     @FXML
     Text TimerText;
@@ -44,4 +45,10 @@ public class GameController {
         game.updateMovement(dt);
     }
 
+    public void updateTimer(double dt){
+        ElapsedTime += dt;
+
+
+        TimerText.setText(String.format("%.1f", ElapsedTime));
+    }
 }

@@ -25,11 +25,15 @@ public class BirdLoop extends AnimationTimer {
         last = now;
 
         dt = Math.min(dt, 0.05);
+        updateTimer(dt);
         updateMovement(dt);
         render();
     }
 
 
+    public void updateTimer(double dt) {
+        gamecontroller.updateTimer(dt);
+    }
 
     public void render(){
         gamecontroller.render();
