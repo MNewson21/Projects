@@ -9,6 +9,7 @@ import java.util.Objects;
 public class TurtleEntity {
     private TurtleMovement turtleMovement;
     private TurtleGraphics turtleGraphics;
+    private TurtleCollision turtleCollision;
 
     double x = 900;
     double vx = 0;
@@ -29,6 +30,7 @@ public class TurtleEntity {
         this.entityController = entityController;
         currentimg = entityController.getGame().getImageholder().TurtleIdle[0];
         this.turtleGraphics = new TurtleGraphics(this);
+        this.turtleCollision = new TurtleCollision(this);
     }
 
 
@@ -38,8 +40,10 @@ public class TurtleEntity {
     }
 
     public void update(double dt) {
-        x += vx * dt;
-        y += vy * dt;
+        if (turtleCollision.intercept(dt) == false){
+            x += vx * dt;
+            y += vy * dt;
+        }
         System.out.println("Before redraw x y vx vy dt " + x + " : " + y  + " : "+ vx + " : " + vy + ":" + dt);
         setPosition(x, y);
         updateAnimTimer(dt);
