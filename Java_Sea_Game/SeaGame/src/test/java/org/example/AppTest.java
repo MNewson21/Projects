@@ -1,8 +1,5 @@
 package org.example;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -10,6 +7,10 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
  * Unit test for simple App.
  */
 public class AppTest  {
+
+    public AppTest() {
+        System.setProperty("java.awt.headless", "true");
+    }
 
     @Test
     public void testApp(){
