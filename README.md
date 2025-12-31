@@ -12,3 +12,28 @@ The main languages I am using / learning about at the moment are
 If you see this, thank you for taking the time to view my repository <br>
 peace <br>
 
+Here are some examples of some of my main projects in this repository
+
+![Websocket Chat Application](Java_Websocket_Implementation/images/webimg5.png)
+<br>
+
+![React Project](React/ReactIntroductoryProject/MDResources/pg1.png)
+<br>
+
+![Live Countdown](LiveCountdown/images/future1.PNG)
+<br>
+
+![Python Genetic Disease Analysis](Python/GeneticDiseaseAnalysis/Images/tree3.PNG)
+<br>
+
+![Notes app using REST](REST_Notes_Application/restful_notes.PNG)
+<br>
+
+
+
+
+
+
+
+
+
