@@ -27,8 +27,11 @@ public class AppTest extends ApplicationTest {
 
     @BeforeAll
     public static  void headless(){
+        System.setProperty("testfx.robot", "glass");
         System.setProperty("java.awt.headless", "true");
-        System.setProperty("glass.platform", "Monocle");
+        System.setProperty("monocle.platform", "Headless");
+        System.setProperty("prism.order", "sw");
+        System.setProperty("prism.text", "t2k");
 
     }
 
