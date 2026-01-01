@@ -51,4 +51,8 @@ public class GameController {
 
         TimerText.setText(String.format("%.1f", ElapsedTime));
     }
+
+    public Game getGame() {
+        return game;
+    }
 }

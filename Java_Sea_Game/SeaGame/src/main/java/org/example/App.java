@@ -10,6 +10,7 @@ import java.io.IOException;
 
 public class App extends Application {
     private Stage stage;
+    private StartContoller controller;
 
     public App() throws IOException {
 
@@ -23,7 +24,7 @@ public class App extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/birdmain.fxml"));
         Parent root = fxmlLoader.load();
 
-        StartContoller controller = fxmlLoader.getController();
+        controller = fxmlLoader.getController();
         controller.init(stage);
 
         stage.setScene(new Scene(root));
@@ -32,5 +33,7 @@ public class App extends Application {
 
     }
 
-
+    public StartContoller getController() {
+        return controller;
+    }
 }
