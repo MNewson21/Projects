@@ -13,6 +13,18 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
 public class AppTest extends ApplicationTest {
+    static{
+        System.setProperty("testfx.robot", "glass");
+        System.setProperty("java.awt.headless", "true");
+        System.setProperty("monocle.platform", "Headless");
+        System.setProperty("prism.order", "sw");
+        System.setProperty("prism.text", "t2k");
+    }
+
+
+
+
+
     private App app;
 
 
