@@ -25,6 +25,8 @@ jobs:
           java-version: '24'
           cache: maven
 
-      - name: Build and test SeaGame
-        run: mvn test
-        working-directory: Java_Sea_Game/SeaGame
+      - name: Build and test SeaGame (with Xvfb)
+        uses: GabrielBB/xvfb-action@v1
+        with:
+          run: mvn test
+          working-directory: Java_Sea_Game/SeaGame
