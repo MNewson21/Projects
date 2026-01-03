@@ -44,7 +44,7 @@ public class TurtleMovement {
         turtle.vx += ax * dt;
         turtle.vy += ay * dt;
 
-        System.out.println("After initial turtle.vx turtle.vy" + turtle.vx + turtle.vy);
+        //System.out.println("After initial turtle.vx turtle.vy" + turtle.vx + turtle.vy);
         if (!left && !right){
             turtle.vx = applyFriction(turtle.vx, dt);
         }
@@ -57,7 +57,7 @@ public class TurtleMovement {
         turtle.vx = clamp(turtle.vx, -maxSpeed, maxSpeed);
         turtle.vy = clamp(turtle.vy, -maxSpeed, maxSpeed);
 
-        System.out.println("Final turtle.vx, turtle.vy = " + turtle.vx + turtle.vy);
+        //System.out.println("Final turtle.vx, turtle.vy = " + turtle.vx + turtle.vy);
         turtle.setVelocity(turtle.vx, turtle.vy);
 
 

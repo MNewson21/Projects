@@ -7,9 +7,9 @@ import javafx.scene.input.KeyEvent;
 import java.util.Objects;
 
 public class TurtleEntity {
-    private TurtleMovement turtleMovement;
-    private TurtleGraphics turtleGraphics;
-    private TurtleCollision turtleCollision;
+    private final TurtleMovement turtleMovement;
+    private final TurtleGraphics turtleGraphics;
+    private final TurtleCollision turtleCollision;
 
     double x = 900;
     double vx = 0;
@@ -30,7 +30,7 @@ public class TurtleEntity {
         this.entityController = entityController;
         currentimg = entityController.getGame().getImageholder().TurtleIdle[0];
         this.turtleGraphics = new TurtleGraphics(this);
-        this.turtleCollision = new TurtleCollision(this);
+        this.turtleCollision = new TurtleCollision(this, entityController.getGame().getGateManager());
     }
 
 
@@ -44,7 +44,7 @@ public class TurtleEntity {
             x += vx * dt;
             y += vy * dt;
         }
-        System.out.println("Before redraw x y vx vy dt " + x + " : " + y  + " : "+ vx + " : " + vy + ":" + dt);
+        //System.out.println("Before redraw x y vx vy dt " + x + " : " + y  + " : "+ vx + " : " + vy + ":" + dt);
         setPosition(x, y);
         updateAnimTimer(dt);
     }
@@ -63,7 +63,7 @@ public class TurtleEntity {
     }
 
     public void onKeyReleased(KeyEvent e){
-        System.out.println("Key Released");
+        //System.out.println("Key Released");
         turtleMovement.onKeyReleased(e);
     }
 
@@ -78,5 +78,7 @@ public class TurtleEntity {
     public void updateAnimTimer(double dt) {
         turtleGraphics.updateAnimTimer(dt);
     }
+
+
 
 }
