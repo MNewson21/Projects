@@ -8,3 +8,32 @@
 - Removed Java_Sea_Game readme.md since it was replaced by the readme.md in SeaGame instead
 
 **Current Game Status:** Game launches, and you can move the turtle sprite around.
+
+
+### 31/12/2025 - Upgraded Testing to use GitHub actions and added collision
+**Added:**
+- TurtleCollision.java so the turtle can collide with the boundaries and no longer go off the screen
+- seagame-ci.yml for automated testing of AppTest.java upon push
+
+**Current Game Status:** Game launches and turtle can not go off the screen. Current tests also get run on runner
+
+### 02/12/2025 - Added new tests and fixed headless testing issue using Xvfb
+Commit ID - 4b70305
+
+**Added:**
+- Xvfb to seagame-ci.yml which mimics a virtual screen on the headless runner which allows it to run the JavaFX tests
+
+
+**Removed:**
+- Monocle from pom.xml since it had version issues and could not get headless to work on Java 24. Hence, moved to Xvfb
+
+**Current Game Status:** Game launches and works as on the 31st, and now automated regression tests run on the pipeline correctly
+
+### 03/12/2025 - Added LoFi Seaweed to the game
+Commit ID - f1ff213
+
+**Added:**
+- GateManager.java to spawn the individual seaweed gates
+- Gate.java for the turtle to swim through
+
+**Current Game Status:** Game works as on the 2nd, and now the turtle can swim through the seaweed gates and they will respawn at a different height.
