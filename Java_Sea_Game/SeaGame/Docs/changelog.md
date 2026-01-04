@@ -18,7 +18,7 @@
 **Current Game Status:** Game launches and turtle can not go off the screen. Current tests also get run on runner
 
 ### 02/12/2025 - Added new tests and fixed headless testing issue using Xvfb
-Commit ID - 4b70305
+Commit ID - 4b70305e0e01e41c2d53aeb6cda3d636bb4f4761
 
 **Added:**
 - Xvfb to seagame-ci.yml which mimics a virtual screen on the headless runner which allows it to run the JavaFX tests
@@ -30,7 +30,7 @@ Commit ID - 4b70305
 **Current Game Status:** Game launches and works as on the 31st, and now automated regression tests run on the pipeline correctly
 
 ### 03/12/2025 - Added LoFi Seaweed to the game
-Commit ID - f1ff213
+Commit ID - f1ff213c879655f18a33f5f02039ba314f2ab1d2
 
 **Added:**
 - GateManager.java to spawn the individual seaweed gates
