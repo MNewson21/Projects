@@ -12,8 +12,11 @@ public class Game {
     private EntityController entityController;
     private Background background;
     private GateManager gateManager;
+    private GameController gameController;
+    private int score;
 
-    public Game(Canvas globalcanvas){
+    public Game(GameController gameController, Canvas globalcanvas){
+        this.gameController = gameController;
         this.globalcanvas = globalcanvas;
         canvas = new GameCanvas(globalcanvas, this);
         imageholder = new ImageHolder();
@@ -60,5 +63,10 @@ public class Game {
 
     public GateManager getGateManager() {
         return gateManager;
+    }
+
+    public void addScore(int scoreToAdd){
+        score += scoreToAdd;
+        gameController.setScoreText("" + score);
     }
 }

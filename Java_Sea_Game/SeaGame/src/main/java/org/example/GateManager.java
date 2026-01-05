@@ -43,13 +43,16 @@ public class GateManager {
     private void checkGate(TurtleEntity turtle, Gate gate) {
         if (turtlePassedGate(turtle, gate) && !gate.hasScored()) {
             gate.setScored(true);
-            System.out.println("Scored at gate : " + gate.getSide());
+            System.out.println("Scored at gate : " + gate.getSide() + " adding score");
+            turtle.getEntityController().getGame().addScore(1);
+
             // score++
             //score will be incremented here, just need to implement score system.
 
         }
 
         if (gate.hasScored() && turtleMovedAway(turtle, gate)) {
+            gate.setScored(false);
             regenerateGate(gate);
             System.out.println("regenerated gate : " + gate.getSide());
         }
