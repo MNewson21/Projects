@@ -37,3 +37,10 @@ Commit ID - f1ff213c879655f18a33f5f02039ba314f2ab1d2
 - Gate.java for the turtle to swim through
 
 **Current Game Status:** Game works as on the 2nd, and now the turtle can swim through the seaweed gates and they will respawn at a different height.
+
+### 05/01/2026 - Added Score
+**Added:**
+- Score to fxml file
+- GameController reference to game so it can interact with the UI
+
+**Current Game Status:** Game works as on the 3rd but now has score that increments when the Turtle passes through the gate
