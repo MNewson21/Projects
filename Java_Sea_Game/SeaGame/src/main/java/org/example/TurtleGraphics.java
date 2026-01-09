@@ -14,7 +14,26 @@ public class TurtleGraphics{
 
     public void draw(GraphicsContext gc) {
         //System.out.println("draw att : " + " x: " + x + " y: " + y + " width: " + width + " height: " + height);
-        gc.drawImage(turtleEntity.currentimg, turtleEntity.x, turtleEntity.y, turtleEntity.width*2, turtleEntity.height*2);
+
+        double drawWidth  = turtleEntity.width * 2;
+        double drawHeight = turtleEntity.height * 2;
+
+        double centerX = turtleEntity.x + drawWidth / 2;
+        double centerY = turtleEntity.y + drawHeight / 2;
+
+
+        gc.save();
+        gc.translate(centerX, centerY);
+
+        if (!turtleEntity.facingRight){
+            gc.scale(1, -1);
+        }
+
+        gc.rotate(turtleEntity.angle);
+
+        gc.drawImage(turtleEntity.currentimg, -drawWidth / 2, -drawHeight / 2, drawWidth, drawHeight );
+        gc.restore();
+        //gc.drawImage(turtleEntity.currentimg, turtleEntity.x, turtleEntity.y, turtleEntity.width*2, turtleEntity.height*2);
     }
 
     public void updateAnimTimer(double dt){

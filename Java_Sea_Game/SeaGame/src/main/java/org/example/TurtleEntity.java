@@ -23,6 +23,9 @@ public class TurtleEntity {
     public Image currentimg;
     private EntityController entityController;
 
+    public double angle;
+    public boolean facingRight = true;
+
     public TurtleEntity(double width, double height, EntityController entityController) {
         this.width = width;
         this.height = height;
@@ -43,7 +46,10 @@ public class TurtleEntity {
         if (turtleCollision.intercept(dt) == false){
             x += vx * dt;
             y += vy * dt;
+            angle = Math.toDegrees(Math.atan2(vy, vx));
+
         }
+
         //System.out.println("Before redraw x y vx vy dt " + x + " : " + y  + " : "+ vx + " : " + vy + ":" + dt);
         setPosition(x, y);
         updateAnimTimer(dt);

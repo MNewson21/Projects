@@ -58,6 +58,12 @@ public class TurtleMovement {
         turtle.vy = clamp(turtle.vy, -maxSpeed, maxSpeed);
 
         //System.out.println("Final turtle.vx, turtle.vy = " + turtle.vx + turtle.vy);
+        if (turtle.vx < 0){
+            turtle.facingRight = false;
+        } else if (turtle.vx > 0){
+            turtle.facingRight = true;
+        }
+
         turtle.setVelocity(turtle.vx, turtle.vy);
 
 
