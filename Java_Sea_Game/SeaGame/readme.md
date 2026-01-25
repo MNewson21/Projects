@@ -13,4 +13,7 @@ Through development, assets and other resources that I have used that are create
 
 This is what the current game looks like : 
 <br>
-![Current Image of the Sea Game](MarkdownImages/currentturtlegamestatus.PNG)
+
+![Current Image of the Sea Game](MarkdownImages/seagamemenu.PNG)
+
+![Current Image of the Sea Game](MarkdownImages/seagamegame.PNG)
