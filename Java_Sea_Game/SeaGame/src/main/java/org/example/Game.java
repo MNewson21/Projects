@@ -14,6 +14,8 @@ public class Game {
     private GateManager gateManager;
     private GameController gameController;
     private int score;
+    private SoundManager soundManager;
+
 
     public Game(GameController gameController, Canvas globalcanvas){
         this.gameController = gameController;
@@ -24,6 +26,8 @@ public class Game {
         entityController = new EntityController(this);
         entityController.spawnTurtle();
         background = new Background(imageholder.background);
+        soundManager = new SoundManager();
+        soundManager.playBackgroundMusic("watermain.mp3");
     }
 
     public void update(){
