@@ -44,3 +44,12 @@ Commit ID - f1ff213c879655f18a33f5f02039ba314f2ab1d2
 - GameController reference to game so it can interact with the UI
 
 **Current Game Status:** Game works as on the 3rd but now has score that increments when the Turtle passes through the gate
+
+### 25/01/2026 - Added Background Music and corrected positions 
+**Added:**
+- SoundManager.java - When created with a passed string argument, it will check the Sounds directory in resources and play that file
+- Maven dependency for media
+
+**Changed:** 
+- Positions of objects are now default to a 1920x1080 screen compared to my laptop screen
+- Some positional adjustments of FXML items
