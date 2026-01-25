@@ -27,6 +27,7 @@ public class AppTest extends ApplicationTest {
     public void start(Stage stage) throws Exception {
         app = new App();
         app.start(stage);
+        EntityController.TestMode = true;
     }
 
     public AppTest() {

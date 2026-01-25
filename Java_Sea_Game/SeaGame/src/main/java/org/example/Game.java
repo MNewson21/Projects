@@ -26,8 +26,11 @@ public class Game {
         entityController = new EntityController(this);
         entityController.spawnTurtle();
         background = new Background(imageholder.background);
-        soundManager = new SoundManager();
-        soundManager.playBackgroundMusic("watermain.mp3");
+
+        if (!EntityController.TestMode){
+            soundManager = new SoundManager();
+            soundManager.playBackgroundMusic("watermain.mp3");
+        }
     }
 
     public void update(){
