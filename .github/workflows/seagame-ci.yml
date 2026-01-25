@@ -1,0 +1,32 @@
+name: SeaGame CI
+
+on:
+  push:
+    branches: [ "SeaGameDev" ]
+    paths:
+      - "Java_Sea_Game/SeaGame/**"
+  pull_request:
+    branches: [ "SeaGameDev" ]
+    paths:
+      - "Java_Sea_Game/SeaGame/**"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 24
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '24'
+          cache: maven
+
+      - name: Build and test SeaGame (with Xvfb)
+        uses: GabrielBB/xvfb-action@v1
+        with:
+          run: mvn test
+          working-directory: Java_Sea_Game/SeaGame

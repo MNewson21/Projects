@@ -20,6 +20,7 @@ public class GameCanvas {
     public void render() {
         gc.clearRect(0, 0, javafxcanvas.getWidth(), javafxcanvas.getHeight());
         game.getBackground().draw(gc);
+        game.getGateManager().draw(gc);
         game.getEntityController().getTurtle().draw(gc);
 
     }
@@ -33,4 +34,19 @@ public class GameCanvas {
     public GraphicsContext getGraphicsContext() {
         return gc;
     }
+
+    public double getWidth(){
+        return javafxcanvas.getWidth();
+    }
+
+    public double getHeight(){
+        return javafxcanvas.getHeight();
+    }
+
+
+//    public void handleCollision(TurtleEntity turtle, Gate gate) {
+//        if (turtle.intersects(gate)) {
+//            turtle.bounceHorizontally();
+//        }
+//    }
 }

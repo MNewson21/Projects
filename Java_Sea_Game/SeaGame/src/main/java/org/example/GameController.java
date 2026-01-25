@@ -20,12 +20,15 @@ public class GameController {
     @FXML
     Canvas globalcanvas;
 
+    @FXML
+    Text ScoreText;
+
     public GameController(){
     }
 
     @FXML
     public void initialize(){
-        this.game = new Game(globalcanvas);
+        this.game = new Game(this, globalcanvas);
         BirdLoop temploop = new BirdLoop(this);
         globalpane.setFocusTraversable(true);
         globalpane.addEventFilter(KeyEvent.KEY_PRESSED, e->game.onKeyPressed(e));
@@ -50,5 +53,13 @@ public class GameController {
 
 
         TimerText.setText(String.format("%.1f", ElapsedTime));
+    }
+
+    public void setScoreText(String score){
+        ScoreText.setText(score);
+    }
+
+    public Game getGame() {
+        return game;
     }
 }

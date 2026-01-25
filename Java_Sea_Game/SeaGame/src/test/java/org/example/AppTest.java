@@ -1,38 +1,85 @@
 package org.example;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import javafx.scene.Node;
+import javafx.scene.input.KeyCode;
+import javafx.stage.Stage;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+import org.testfx.api.FxAssert;
+import org.testfx.framework.junit5.ApplicationTest;
+import org.testfx.util.WaitForAsyncUtils;
 
-/**
- * Unit test for simple App.
- */
-public class AppTest 
-    extends TestCase
-{
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public AppTest( String testName )
-    {
-        super( testName );
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+
+public class AppTest extends ApplicationTest {
+
+
+
+
+
+
+    private App app;
+
+
+    @Override
+    public void start(Stage stage) throws Exception {
+        app = new App();
+        app.start(stage);
+        EntityController.TestMode = true;
     }
 
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class );
+    public AppTest() {
     }
 
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
-        assertTrue( true );
+    @BeforeAll
+    public static  void headless(){
+//        System.setProperty("testfx.robot", "glass");
+//        System.setProperty("java.awt.headless", "true");
+
+
     }
+
+    @Test
+    public void testApp(){
+        assertTrue(true);
+    }
+
+    @Test
+    public void menuTest(){
+        FxAssert.verifyThat("#APANE", Node::isVisible);
+        sleep(200);
+        clickOn("#StartButton");
+        WaitForAsyncUtils.waitForFxEvents();
+        sleep(200);
+        FxAssert.verifyThat("#TimerText", Node::isVisible);
+    }
+
+    @Test
+    public void MovementTest(){
+        clickOn("#StartButton");
+        WaitForAsyncUtils.waitForFxEvents();
+        sleep(200);
+        TurtleEntity turtle = app.getController().getGameController().getGame().getEntityController().getTurtle();
+
+        double turtleX = turtle.x;
+
+        press(KeyCode.A).release(KeyCode.A);
+        sleep(50);
+        press(KeyCode.A).release(KeyCode.A);
+        sleep(50);
+        press(KeyCode.A).release(KeyCode.A);
+        sleep(50);
+
+
+        assertNotEquals(turtleX, turtle.x);
+
+
+
+    }
+
+
+
+
 }

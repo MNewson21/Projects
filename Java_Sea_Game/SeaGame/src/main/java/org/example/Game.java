@@ -11,18 +11,31 @@ public class Game {
     private ImageHolder imageholder;
     private EntityController entityController;
     private Background background;
+    private GateManager gateManager;
+    private GameController gameController;
+    private int score;
+    private SoundManager soundManager;
 
-    public Game(Canvas globalcanvas){
+
+    public Game(GameController gameController, Canvas globalcanvas){
+        this.gameController = gameController;
         this.globalcanvas = globalcanvas;
         canvas = new GameCanvas(globalcanvas, this);
         imageholder = new ImageHolder();
+        gateManager = new GateManager(canvas);
         entityController = new EntityController(this);
         entityController.spawnTurtle();
         background = new Background(imageholder.background);
+
+        if (!EntityController.TestMode){
+            soundManager = new SoundManager();
+            soundManager.playBackgroundMusic("watermain.mp3");
+        }
     }
 
     public void update(){
         canvas.render();
+        gateManager.update(entityController.getTurtle());
     }
 
     public void updateMovement(double dt){
@@ -32,7 +45,7 @@ public class Game {
 
 
     public void onKeyPressed(KeyEvent e) {
-        System.out.println("onKeyPressed");
+        //System.out.println("onKeyPressed");
         entityController.getTurtle().onKeyPressed(e);
     }
     public void onKeyReleased(KeyEvent e) {
@@ -53,5 +66,14 @@ public class Game {
 
     public Background getBackground() {
         return background;
+    }
+
+    public GateManager getGateManager() {
+        return gateManager;
+    }
+
+    public void addScore(int scoreToAdd){
+        score += scoreToAdd;
+        gameController.setScoreText("" + score);
     }
 }

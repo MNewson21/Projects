@@ -12,6 +12,7 @@ import java.io.IOException;
 public class StartContoller {
     private Stage stage;
     private Game game;
+    private GameController gameController;
 
     public StartContoller() {
 
@@ -25,9 +26,12 @@ public class StartContoller {
     public void OnStartButtonClicked(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/birdgame.fxml"));
         Parent root = loader.load();
+        gameController = loader.getController();
         stage.setScene(new Scene(root));
 
     }
 
-
+    public GameController getGameController() {
+        return gameController;
+    }
 }

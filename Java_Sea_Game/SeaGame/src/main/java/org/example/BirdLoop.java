@@ -40,6 +40,6 @@ public class BirdLoop extends AnimationTimer {
     }
     public void updateMovement(double dt){
         gamecontroller.updateMovement(dt);
-        System.out.println("updatemovementdt: " + dt);
+        //System.out.println("updatemovementdt: " + dt);
     }
 }

@@ -1,6 +1,7 @@
 package org.example;
 
 public class EntityController {
+    static boolean TestMode;
     private Game game;
     private TurtleEntity turtle;
 

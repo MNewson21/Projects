@@ -8,8 +8,12 @@ The aim of this game is to keep the Turtle alive and gain as many points as poss
 
 This game is still in development, and I am trying to consistently work on it
 
-Since it is not finished, you can find my [Changelog](Docs/changelog.md)
+Since it is not finished, you can find my [Changelog](Docs/changelog.md) <br>
+Through development, assets and other resources that I have used that are created by other people are referenced in my [Credits Markdown](Docs/credits.md)
 
 This is what the current game looks like : 
 <br>
-![Current Image of the Sea Game](MarkdownImages/currentturtlegamestatus.PNG)
+
+![Current Image of the Sea Game](MarkdownImages/seagamemenu.PNG)
+
+![Current Image of the Sea Game](MarkdownImages/seagamegame.PNG)
