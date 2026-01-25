@@ -18,9 +18,9 @@ public class GateManager {
     private final Random random = new Random();
 
     public GateManager(GameCanvas canvas) {
-        this.screenWidth = canvas.getWidth() - 200;
-        this.screenHeight = canvas.getHeight() - 150;
-        leftGate = createGate(Gate.Side.LEFT,  200);
+        this.screenWidth = canvas.getWidth();
+        this.screenHeight = canvas.getHeight();
+        leftGate = createGate(Gate.Side.LEFT,  0);
         rightGate = createGate(Gate.Side.RIGHT, screenWidth - wallWidth);
     }
 
@@ -81,7 +81,7 @@ public class GateManager {
         newGapY = Math.max(100, Math.min(newGapY, screenHeight - gapHeight - 100));
 
         if (gate.getSide() == Gate.Side.LEFT) {
-            leftGate = new Gate(Gate.Side.LEFT, 200, newGapY, gapHeight);
+            leftGate = new Gate(Gate.Side.LEFT, 0, newGapY, gapHeight);
         } else {
             rightGate = new Gate(Gate.Side.RIGHT, screenWidth - wallWidth, newGapY, gapHeight);
         }
