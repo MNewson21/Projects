@@ -1,7 +1,9 @@
 Hello I am Miles Newson <br> <br>
 Thank you for taking the time to view my repository <br>
 
-This is my personal git for projects that I make alongside studying my Computer Science Bachelor's Degree <br> 
+
+This is my personal git for projects that I make alongside studying my Computer Science Bachelor's Degree . Also check out my other repositories for newer and larger projects.
+<br>  Feel free to connect with me if you take inspiration from any of these projects.<br>
 - I am currently in the third year of my degree as of this readme update <br>
 - This is also used to improve my proficiency in languages that I know <br> 
 - I also do leetcode in my spare time ~ https://leetcode.com/u/milesn/ <br> <br>
